@@ -1,6 +1,6 @@
 # Análise Epidemiológica SRAG
 
-Este repositório contém um relatório em R Markdown para análise epidemiológica de Síndromes Respiratórias Agudas Graves (SRAG) na Região Leste. O relatório gera tanto um documento Word quanto um HTML interativo com tabelas paginadas e gráficos.
+Este repositório contém um relatório em R Markdown para análise epidemiológica de Síndromes Respiratórias Agudas Graves (SRAG). O relatório gera tanto um documento Word quanto um HTML interativo com tabelas paginadas e gráficos.
 
 ## Autor
 
