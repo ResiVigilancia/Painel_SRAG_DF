@@ -73,12 +73,12 @@ library(fmesher)
 
 
 # Definir caminho da pasta de dados
-pasta_dados <- "C:/Users/josel/Downloads/Projeto Shiny síndromes gripais/Síndromes_Gripais/"
+pasta_dados <- "CAMINHO DA PASTA PARA O BANCO DE DADOS DE SRAG"
 
 # Função para carregar o arquivo SRAG mais recente
 carregar_srag <- function() {
   arquivos <- list.files(path = pasta_dados,
-                         pattern = "^Casos_SRAG_.*\\.xlsx$",
+                         pattern = "^Casos_SRAG_.*\\.xlsx$",  #Procura uma planilha em xlsx que contenha o nome Casos_SRAG
                          full.names = TRUE)
   mais_recente <- arquivos[which.max(file.mtime(arquivos))]
   readxl::read_excel(mais_recente)
@@ -94,7 +94,7 @@ srag <- carregar_srag() %>%
   # filtrar apenas Leste e remover "brasilia" se existir
   filter(res_RS == "Leste", ID_MN_RESI_pad != "brasilia")
 
-pop <- readxl::read_excel(file.path(pasta_dados, "POP.xlsx")) %>%
+pop <- readxl::read_excel(file.path(pasta_dados, "PLANILHA DA POPULAÇÃO")) %>%
   mutate(
     REG_ADM_pad = REG_ADM %>%
       stringi::stri_trans_general("Latin-ASCII") %>% tolower() %>% str_trim()
