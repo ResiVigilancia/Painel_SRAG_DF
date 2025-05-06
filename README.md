@@ -4,7 +4,7 @@ Este repositório contém um relatório em R Markdown para análise epidemiológ
 
 ## Autor
 
-José Santos
+Residentes de vigilância em saúde da Unb
 
 ## Data
 
